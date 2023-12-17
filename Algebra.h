@@ -4,8 +4,12 @@
 using namespace std;
 
 void calculator(float, float);
+
 void solveLinearEquation(float, float);
 void solveQuadraticEquation(float, float, float);
+
+float raiseNumberToThePower(float, float);
+float squareRoot(float);
 
 void calculator(float number1, float number2) {
 	system("cls");
@@ -26,7 +30,7 @@ void calculator(float number1, float number2) {
 
 	cout << "Division \n";
 	if (number2 != 0)
-		cout << number1 << "/" << number2 << "=" << division;
+		cout << number1 << "/" << number2 << "=" << division << endl;
 	else
 		cout << "Error: Division by Zero" << endl;
 }
@@ -66,4 +70,17 @@ void solveQuadraticEquation(float a, float b, float c) {
 
 	else
 		cout << "The equation has no solutions" << endl;
+}
+
+float raiseNumberToThePower(float number, float power) {
+	return pow(number, power);
+}
+
+float squareRoot(float number) {
+	if (number < 0) {
+		cout << "Negative Square Root is undefined" << endl;
+		exit(0);
+	}
+	else
+		return sqrt(number);
 }
